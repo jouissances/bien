@@ -1,0 +1,23 @@
+$green: #3BC8AA;
+$cream: #FFECCF;
+$purple: #31234E;
+$pink: #FFC6C6;
+$black: #1E1E1E;
+$orange: #FF551A;
+// 
+$titleFont: "PT Serif";
+$bodyFont: "Work Sans";
+// 1. Global CSS
+body {
+    color: $black;
+    font-family: $bodyFont;
+}
+
+h1 {
+    font-family: $titleFont;
+}
+
+h2 {
+    color: $green;
+    font-family: $titleFont
+}

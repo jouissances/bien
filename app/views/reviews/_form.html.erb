@@ -1,0 +1,35 @@
+<%# notice file begins with _ which means that it is a partial and we can use this form everywhere %>
+<%# Partial templates are another device for breaking the rendering process into more manageable chunks. With a partial, you can move the code for rendering a particular piece of a response to its own file. %>
+
+<%= form_for @review do |field| %>
+    <p>
+        <%= field.label :title %>
+        <%= field.text_field :title %>
+    </p>
+    <p>
+        <%= field.label :body %>
+        <%= field.text_area :body %>
+    </p>
+    <p>
+        <%= field.label :score %>
+        <%= field.number_field :score %>
+    </p>
+    <p>
+        <%= field.label :restaurant %>
+        <%= field.text_field :restaurant %>
+    </p>
+    <p>
+        <%= field.label :location %>
+        <%= field.text_field :location %>
+    </p>
+    <p>
+        <%= field.label :price %>
+        <%= field.text_field :price %>
+    </p>
+    <p>
+        <%= field.label :cuisine %>
+        <%= field.text_field :cuisine %>
+    </p>
+
+    <%= field.submit 'Save review'%>
+<% end %>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bien Reviews — The best restaurant reviews in the world</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1><%= link_to root_path do %>
+        <%= image_tag "bien-logo.svg" %>
+      <% end %>
+      </h1>
+      <h2>The best restaurant reviews in the world</h2>
+      <nav>
+        <%= link_to "Add a new review", new_review_path %>
+      </nav>
+    </header>
+
+    <%# yield allows us to inject the content of the view (mVc) that is currently being rendered%>
+    <%# often compared with the render method %>
+
+    <%= yield %>
+
+    <footer>
+      <p>Copyright 2018 Bien Reviews</p>
+    </footer>
+  </body>
+</html>
